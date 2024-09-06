@@ -1,0 +1,53 @@
+{
+  "name": "prueba-components",
+  "description": "",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx src",
+    "dev": "oc-server dev",
+    "build": "tsc --noEmit && oc package .",
+    "test": "vitest",
+    "start": "oc dev .. --components prueba-components"
+  },
+  "oc": {
+    "files": {
+      "template": {
+        "type": "oc-template-react",
+        "hashKey": "a0b6a1527bcfcaa72af0332dbabc9db801d31b41",
+        "src": "template.js",
+        "version": "4.1.0",
+        "size": 6548
+      },
+      "static": [
+        "public"
+      ]
+    },
+    "parameters": {
+      "userId": {
+        "default": 1,
+        "description": "The user id from the user database",
+        "example": 1,
+        "mandatory": true,
+        "type": "number"
+      }
+    },
+    "version": "0.49.57",
+    "packaged": true,
+    "date": 1725660148648
+  },
+  "dependencies": {
+    "prueba-components": "file:"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/react": "^18.0.28",
+    "jsdom": "^21.1.1",
+    "oc-server": "^1.1.5",
+    "oc-template-react-compiler": "6.7.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.1.3",
+    "vitest": "^0.32.2"
+  }
+}
